@@ -175,7 +175,7 @@ button {
   width: 100%;
   position: relative;
   grid-area: main;
-  background: url("/images/compress/main.jpg") center;
+  background: url("images/compress/main.jpg") center;
   background-size: cover;
   display: grid;
   align-items: center; }
@@ -554,7 +554,7 @@ button {
   .story__btn-play.absolute {
     position: absolute;
     opacity: 0;
-    trasition: opacity 0.3s; }
+    transition: opacity 0.3s; }
   .story__btn-play.bd {
     position: absolute;
     border-radius: 50%;
