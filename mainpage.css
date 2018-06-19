@@ -175,7 +175,7 @@ button {
   width: 100%;
   position: relative;
   grid-area: main;
-  background: url("/images/compress/main.jpg") center;
+  background: url("images/compress/main.jpg") center;
   background-size: cover;
   display: grid;
   align-items: center; }
@@ -317,35 +317,35 @@ button {
     opacity: 0; }
 
 .artist1 {
-  background: url("/images/compress/art_01.jpg") center;
+  background: url("images/compress/art_01.jpg") center;
   background-size: cover; }
 
 .artist2 {
-  background: url("/images/compress/art_02.jpg") center;
+  background: url("images/compress/art_02.jpg") center;
   background-size: cover; }
 
 .artist3 {
-  background: url("/images/compress/art_03.jpg") center;
+  background: url("images/compress/art_03.jpg") center;
   background-size: cover; }
 
 .artist4 {
-  background: url("/images/compress/art_04.jpg") center;
+  background: url("images/compress/art_04.jpg") center;
   background-size: cover; }
 
 .artist5 {
-  background: url("/images/compress/art_05.jpg") center;
+  background: url("images/compress/art_05.jpg") center;
   background-size: cover; }
 
 .artist6 {
-  background: url("/images/compress/art_06.jpg") center;
+  background: url("images/compress/art_06.jpg") center;
   background-size: cover; }
 
 .artist7 {
-  background: url("/images/compress/art_07.jpg") center;
+  background: url("images/compress/art_07.jpg") center;
   background-size: cover; }
 
 .artist8 {
-  background: url("/images/compress/art_08.jpg") center;
+  background: url("images/compress/art_08.jpg") center;
   background-size: cover; }
 
 .artistcard__name {
@@ -536,13 +536,13 @@ button {
       opacity: 0; }
 
 .pic1 {
-  background: url("/images/compress/news_01.jpg"); }
+  background: url("images/compress/news_01.jpg"); }
 
 .pic2 {
-  background: url("/images/compress/news_02.jpg"); }
+  background: url("images/compress/news_02.jpg"); }
 
 .pic3 {
-  background: url("/images/compress/news_03.jpg"); }
+  background: url("images/compress/news_03.jpg"); }
 
 .story__btn-play {
   z-index: 5;
