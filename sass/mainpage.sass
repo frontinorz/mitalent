@@ -45,10 +45,8 @@ body,html
   height: 100%
   min-width: 340px
   max-width: 1920px
-  //overflow-x: hidden
   display: grid
   grid-template-columns: 1fr
-  //grid-template-rows: auto 1fr 1fr 1fr auto
   grid-template-areas: "head-nav" "head-main" "viewartist" "story" "footer"
   grid-gap: 25px
   padding: 25px
@@ -60,7 +58,6 @@ body,html
   @include breakpoint(tablet)
     padding: 25px $padding-tablet
   @include breakpoint(phone)
-    //grid-template-rows: 80px calc(100vh - 150px) repeat(2, 1fr) 1fr
     padding: $padding-phone
     grid-gap: $padding-phone
 ul
@@ -105,16 +102,16 @@ button
   display: grid
   grid-template-columns: minmax(150px, 250px) minmax(800px, 1fr) minmax(150px,250px)
   grid-template-areas: "sideSocial main sideIndex"
-  @include displaynone
   @include breakpoint(desktop)
     grid-template-columns: minmax(400px, 1fr)
     grid-template-areas: "main"
     .indexbar, .sidebar
       display: none
     .btn-play
+      z-index: 10
       justify-self: end
-      color: #fff
-      background: $color-main
+      color: #000
+      background: #eee
     .artist
       top: 10%
       color: #fff
@@ -202,10 +199,11 @@ button
   width: 100%
   position: relative
   grid-area: main
-  background: url('images/compress/main.jpg') center
+  background: url('images/compress/art_02.jpg') center
   background-size: cover
   display: grid
   align-items: center
+  filter: grayscale(100%)
 .artist
   position: absolute
   top: 50%

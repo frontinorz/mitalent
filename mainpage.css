@@ -20,7 +20,10 @@ body, html {
   grid-template-areas: "head-nav" "head-main" "viewartist" "story" "footer";
   grid-gap: 25px;
   padding: 25px;
-  justify-content: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 25px 200px; }
   @media (max-width: 1280px) {
     .mainwrapper {
@@ -51,7 +54,8 @@ button {
   cursor: pointer; }
 
 * {
-  box-sizing: border-box; }
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
 
 .put {
   display: none; }
@@ -62,7 +66,10 @@ button {
   display: grid;
   grid-auto-flow: column;
   grid-template-columns: repeat(3, minmax(80px, 1fr));
-  align-items: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   align-self: center; }
   @media (max-width: 1280px) {
     .headnav .btn-text {
@@ -72,6 +79,7 @@ button {
 
 /* Head */
 .head {
+  min-height: -webkit-calc(100vh - 120px);
   min-height: calc(100vh - 120px);
   grid-area: head-main;
   display: grid;
@@ -84,13 +92,16 @@ button {
       .head .indexbar, .head .sidebar {
         display: none; }
       .head .btn-play {
+        z-index: 10;
         justify-self: end;
-        color: #fff;
-        background: #b5d3d3; }
+        color: #000;
+        background: #eee; }
       .head .artist {
         top: 10%;
         color: #fff;
-        transform: translate(15%, 0); } }
+        -webkit-transform: translate(15%, 0);
+            -ms-transform: translate(15%, 0);
+                transform: translate(15%, 0); } }
   @media (max-width: 599px) {
     .head {
       grid-template-columns: 1fr;
@@ -116,8 +127,14 @@ button {
 .menu {
   display: grid;
   grid-auto-flow: column;
-  align-items: center;
-  justify-content: start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: start;
+      -ms-flex-pack: start;
+          justify-content: start;
   grid-gap: 20px; }
   .menu i {
     font-size: 1.2rem; }
@@ -142,18 +159,33 @@ button {
   grid-area: sideSocial;
   display: grid;
   grid-template-rows: repeat(3, minmax(200px, 1fr));
-  align-items: center; }
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
 
 .socialgroup {
-  align-self: start; }
+  -webkit-align-self: start;
+      -ms-flex-item-align: start;
+          align-self: start; }
   .socialgroup li {
     margin-bottom: 25px; }
 
 .indexnumber {
-  transform: rotate(-90deg) translate(-50%, 50%);
-  transform-origin: 0;
+  -webkit-transform: rotate(-90deg) translate(-50%, 50%);
+      -ms-transform: rotate(-90deg) translate(-50%, 50%);
+          transform: rotate(-90deg) translate(-50%, 50%);
+  -webkit-transform-origin: 0;
+      -ms-transform-origin: 0;
+          transform-origin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center; }
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
   .indexnumber:after {
     content: '';
     display: block;
@@ -163,7 +195,9 @@ button {
     background-color: #000; }
 
 .btn-main {
-  align-self: end;
+  -webkit-align-self: end;
+      -ms-flex-item-align: end;
+          align-self: end;
   background: #b5d3d3;
   color: #fff;
   font-weight: 900;
@@ -175,15 +209,22 @@ button {
   width: 100%;
   position: relative;
   grid-area: main;
-  background: url("images/compress/main.jpg") center;
+  background: url("images/compress/art_02.jpg") center;
   background-size: cover;
   display: grid;
-  align-items: center; }
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%); }
 
 .artist {
   position: absolute;
   top: 50%;
-  transform: translate(-15%, 0%); }
+  -webkit-transform: translate(-15%, 0%);
+      -ms-transform: translate(-15%, 0%);
+          transform: translate(-15%, 0%); }
 
 .artist__name {
   font-size: 5rem;
@@ -205,7 +246,9 @@ button {
 .btn-play {
   width: 75px;
   height: 75px;
-  align-self: end;
+  -webkit-align-self: end;
+      -ms-flex-item-align: end;
+          align-self: end;
   justify-self: start;
   background: #fff;
   padding: 15px;
@@ -215,15 +258,24 @@ button {
 .indexbar {
   grid-area: sideIndex;
   display: grid;
-  align-items: end;
+  -webkit-box-align: end;
+  -webkit-align-items: end;
+      -ms-flex-align: end;
+          align-items: end;
   justify-items: start;
   padding: 75px;
   padding-right: 0; }
   .indexbar li {
     margin-bottom: 25px;
     opacity: 0.5;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center; }
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
     .indexbar li:after {
       content: '';
       position: absolute;
@@ -266,7 +318,10 @@ button {
   grid-column: 1 / -1;
   display: grid;
   justify-self: center;
-  align-items: center; }
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
 
 .career {
   display: grid;
@@ -274,9 +329,19 @@ button {
   grid-gap: 25px; }
   .career a {
     text-transform: uppercase;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
     letter-spacing: 1px; }
     .career a:hover:after {
       width: 120%; }
@@ -287,6 +352,7 @@ button {
       height: 2px;
       margin-top: 10px;
       background: #000;
+      -webkit-transition: width 0.3s;
       transition: width 0.3s; }
 
 .artistcard-group {
@@ -299,12 +365,19 @@ button {
   text-align: center;
   background: #eee;
   display: grid;
-  align-items: end;
+  -webkit-box-align: end;
+  -webkit-align-items: end;
+      -ms-flex-align: end;
+          align-items: end;
   overflow: hidden; }
   .artistcard:hover .artistcard__name {
-    transform: translateY(0); }
+    -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+            transform: translateY(0); }
   .artistcard:hover .btn-more {
-    transform: translateY(0) rotate(45deg); }
+    -webkit-transform: translateY(0) rotate(45deg);
+        -ms-transform: translateY(0) rotate(45deg);
+            transform: translateY(0) rotate(45deg); }
   .artistcard:hover:before {
     opacity: 0.8; }
   .artistcard:before {
@@ -313,6 +386,7 @@ button {
     background: #b5d3d3;
     width: 100%;
     height: 100%;
+    -webkit-transition: opacity 0.3s;
     transition: opacity 0.3s;
     opacity: 0; }
 
@@ -353,8 +427,13 @@ button {
   color: #fff;
   font-size: 1.2rem;
   margin-bottom: 25px;
-  transform: translateY(150%);
-  transition: transform 0.3s; }
+  -webkit-transform: translateY(150%);
+      -ms-transform: translateY(150%);
+          transform: translateY(150%);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s; }
 
 .artistcard__career {
   margin-top: 10px;
@@ -364,8 +443,13 @@ button {
   position: absolute;
   padding: 10px;
   border-radius: 100%;
-  transform: rotate(0deg) translateY(-200%);
+  -webkit-transform: rotate(0deg) translateY(-200%);
+      -ms-transform: rotate(0deg) translateY(-200%);
+          transform: rotate(0deg) translateY(-200%);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
   transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
   background: #fff;
   color: #000;
   right: 10px;
@@ -373,7 +457,9 @@ button {
 
 .btn-explore {
   grid-column: 1 / -1;
-  align-self: end;
+  -webkit-align-self: end;
+      -ms-flex-item-align: end;
+          align-self: end;
   justify-self: center;
   padding: 10px 20px;
   border-radius: 30px;
@@ -489,7 +575,9 @@ button {
   position: relative;
   padding: 0px 20px;
   display: grid;
-  align-content: space-between; }
+  -webkit-align-content: space-between;
+      -ms-flex-line-pack: justify;
+          align-content: space-between; }
   .story__wrap-info.vertical {
     padding: 0px;
     padding-top: 20px; }
@@ -497,7 +585,9 @@ button {
 .featured {
   padding: 20px;
   background: #b5d3d3;
-  align-content: end;
+  -webkit-align-content: end;
+      -ms-flex-line-pack: end;
+          align-content: end;
   color: #fff; }
   .featured .story__date {
     color: #fff; }
@@ -511,11 +601,21 @@ button {
 .story__pic {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background: #eee;
   min-width: 150px; }
   .story__pic.fixed-height-80 {
@@ -532,6 +632,7 @@ button {
       width: 100%;
       height: 100%;
       background: #b5d3d3;
+      -webkit-transition: opacity 0.3s;
       transition: opacity 0.3s;
       opacity: 0; }
 
@@ -554,15 +655,25 @@ button {
   .story__btn-play.absolute {
     position: absolute;
     opacity: 0;
+    -webkit-transition: opacity 0.3s;
     transition: opacity 0.3s; }
   .story__btn-play.bd {
     position: absolute;
     border-radius: 50%;
     left: 40px;
     bottom: 20px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center; }
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
     .story__btn-play.bd:before {
       content: '';
       position: absolute;
@@ -586,7 +697,10 @@ button {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(3, 50px);
   grid-template-areas: "logo sign" "hr hr" "copyright social";
-  align-items: center; }
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
   @media (max-width: 599px) {
     .foot {
       grid-template-rows: repeat(4, 20px);
@@ -604,8 +718,14 @@ button {
 .foot__sign {
   grid-area: sign;
   justify-self: end;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: right;
   text-transform: uppercase; }
   .foot__sign:before {
